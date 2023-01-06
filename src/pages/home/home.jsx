@@ -83,8 +83,8 @@ export const Home = () =>  {
                     </div>
                     <div className="post-content">
                         <Image className="imgPost" src={post.image} alt={"ImagenPost"}/>
-                        <Text text={post.text}/> 
-                        <span>Falta tags</span>
+                        <Text text={post.text}/>                         
+                        <Button className="buttonPost" text={"tags"} onClick={openModalOwner} />
                         <span>Likes= {post.likes}</span>
                     </div>
                     <div className="post-footer">

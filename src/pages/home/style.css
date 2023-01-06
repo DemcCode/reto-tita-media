@@ -1,15 +1,19 @@
 .imgOwner {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   border-radius: 25% 50% 75% 100%;
+  margin-right: 0.7rem;
 }
 
 .buttonPost {
-    background-color: transparent;
-    border: none;
-    color: inherit;
-    cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .imgPost{
@@ -61,7 +65,8 @@
     /* Estilo para el contenido de cada post */
     font-size: 16px;
     line-height: 1.5;
-    margin-top: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   @media only screen and (max-width: 480px){
