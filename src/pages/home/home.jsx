@@ -18,7 +18,7 @@ export const Home = () =>  {
             const headers = {
                 'app-id': '63b75d0f1181ee14b202e985'
             };
-            axios.get('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca/post?limit=10',  { headers })
+            await axios.get('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca/post?limit=10',  { headers })
             .then(response => {
                 setPosts(response.data.data);
             })
@@ -34,7 +34,7 @@ export const Home = () =>  {
             const headers = {
                 'app-id': '63b75d0f1181ee14b202e985'
             };
-            axios.get('https://dummyapi.io/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10',  { headers })
+            await axios.get('https://dummyapi.io/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10',  { headers })
             .then(response => {
                 setComment(response.data.data);            
             })
