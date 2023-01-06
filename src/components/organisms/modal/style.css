@@ -9,6 +9,10 @@
   }
   
   .modal-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
     background-color: white;
     width: 50%;
     min-width: 400px;

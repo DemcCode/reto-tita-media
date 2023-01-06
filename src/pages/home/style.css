@@ -32,7 +32,7 @@
 }
 .posts {
   border: rgb(228, 227, 227) solid 1px;
-  border-radius: 20px;    
+  border-radius: 10px;    
   }
 
   .post {
@@ -81,6 +81,15 @@
     color: white;
     padding: 0.2rem;
     cursor: pointer;
+  }
+
+  .post-modal {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .post-modal-header {
+    text-align: center;
   }
 
   @media only screen and (max-width: 480px){
