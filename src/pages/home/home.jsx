@@ -12,13 +12,13 @@ export const Home = () =>  {
     const [comment, setComment] = useState([]);
     const [showModalComment, setShowModalComment] = useState(false);  
     const [showModalOwner, setShowModalOwner] = useState(false);       
-       
+
     useEffect(() => {     
         async function getPosts() {
             const headers = {
                 'app-id': '63b75d0f1181ee14b202e985'
             };
-            await axios.get('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca/post?limit=10',  { headers })
+            await axios.get('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109f4/post?limit=10',  { headers })
             .then(response => {
                 setPosts(response.data.data);
             })
@@ -45,6 +45,19 @@ export const Home = () =>  {
         getComments();
     }, []);
 
+    const getPostTag = async(tag) => {    
+        const headers = {
+            'app-id': '63b75d0f1181ee14b202e985'
+        };
+        await axios.get(`https://dummyapi.io/data/v1/tag/${tag}/post?limit=10`,  { headers })
+        .then(response => {
+            setPosts(response.data.data);        
+        })
+        .catch(error => {
+            console.error(error);
+        });        
+    }
+
     const openModalOwner = () => {
         setShowModalOwner(true);        
     }
@@ -55,24 +68,24 @@ export const Home = () =>  {
 
     const openModalComment = () => {        
         setShowModalComment(true);
-      };
-    
-      const closeModalComment = () => {
-        setShowModalComment(false);
-      };
+    };
+
+    const closeModalComment = () => {
+    setShowModalComment(false);
+    };
 
     return (
         <>
         <Header />
         <div className='posts-container'>
-        {posts.map((post, index) => (               
-            <div className="posts" key={index}>
+        {posts.map((post, indexPost) => (               
+            <div className="posts" key={indexPost}>
                 <div className="post">
                     <div className="post-header">
                         <Image className="imgOwner" src={post.owner.picture} alt={"ImagenOwner"}/>                        
                         <Button className="buttonPost" text={post.owner.firstName+' '+post.owner.lastName} onClick={openModalOwner} />
                         <Modal isOpen={showModalOwner} onClose={() => setShowModalOwner(false)}>
-                            <div className="post-modal" key={index}>
+                            <div className="post-modal" key={indexPost}>
                                 <div className="post-modal-header">
                                     <Image className="imgOwner" src={post.owner.picture} alt={"ImagenOwner"}/>
                                     <Text text={post.owner.firstName+' '+post.owner.lastName}/> 
@@ -87,7 +100,7 @@ export const Home = () =>  {
                         <div className='tags-content'>
                             {
                                 post.tags.map((tag, index) => (
-                                    <Button className="buttonTag" text={tag} onClick={openModalOwner} />
+                                    <Button className="buttonTag" text={tag} onClick={()=>getPostTag(tag)} />
                                 ))
                             }                        
                         </div>                   
