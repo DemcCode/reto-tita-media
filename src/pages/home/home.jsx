@@ -99,7 +99,7 @@ export const Home = () =>  {
                                 <Text text={comment.message}/>
                             </div>                            
                         ))}
-                            <Button className="button" text={"Cerrar"} onClick={closeModalComment} />
+                            <Button className="button" text={"Cerra"} onClick={closeModalComment} />
                         </Modal>
                     </div>
                 </div>               
