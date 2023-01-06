@@ -63,3 +63,20 @@
     line-height: 1.5;
     margin-top: 10px;
   }
+
+  @media only screen and (max-width: 480px){
+    /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor o igual a 600px */
+    .posts-container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
+  }
+  @media only screen and (min-width: 480px) and (max-width: 780px){
+    /* Estilos que se aplicarán cuando el ancho de la pantalla sea mayor o igual a 600px */
+    .posts-container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+  }
