@@ -1,0 +1,65 @@
+.imgOwner {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 25% 50% 75% 100%;
+}
+
+.buttonPost {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.imgPost{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.posts-container{
+  margin-bottom: 1rem;
+  width: 80%;
+  margin: auto;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.posts {
+  border: rgb(175, 174, 174) solid 1px;
+  border-radius: 20px;    
+  }
+
+  .post {
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  
+  .post-header {
+    /* Estilo para el encabezado de cada post */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .post-title {
+    /* Estilo para el título de cada post */
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .post-meta {
+    /* Estilo para la fecha de publicación de cada post */
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .post-content {
+    /* Estilo para el contenido de cada post */
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
