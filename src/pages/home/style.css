@@ -31,7 +31,7 @@
     grid-gap: 20px;
 }
 .posts {
-  border: rgb(175, 174, 174) solid 1px;
+  border: rgb(228, 227, 227) solid 1px;
   border-radius: 20px;    
   }
 
@@ -39,7 +39,6 @@
     padding: 20px;
     border-radius: 5px;
   }
-  
   
   .post-header {
     /* Estilo para el encabezado de cada post */
@@ -67,6 +66,21 @@
     line-height: 1.5;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .tags-content {
+    display: flex;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .buttonTag {
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.2rem;
+    cursor: pointer;
   }
 
   @media only screen and (max-width: 480px){

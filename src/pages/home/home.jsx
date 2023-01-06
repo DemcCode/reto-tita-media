@@ -83,9 +83,15 @@ export const Home = () =>  {
                     </div>
                     <div className="post-content">
                         <Image className="imgPost" src={post.image} alt={"ImagenPost"}/>
-                        <Text text={post.text}/>                         
-                        <Button className="buttonPost" text={"tags"} onClick={openModalOwner} />
-                        <span>Likes= {post.likes}</span>
+                        <Text text={post.text}/>     
+                        <div className='tags-content'>
+                            {
+                                post.tags.map((tag, index) => (
+                                    <Button className="buttonTag" text={tag} onClick={openModalOwner} />
+                                ))
+                            }                        
+                        </div>                   
+                        <i className='fa-regular fa-thumbs-up'>{post.likes}</i>
                     </div>
                     <div className="post-footer">
                         <Button className="buttonPost" text={"Comentarios"} onClick={openModalComment} />
