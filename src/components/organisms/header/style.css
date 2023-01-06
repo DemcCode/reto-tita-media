@@ -1,7 +1,7 @@
 header {
     height: 50px;
     margin-bottom: 2rem;
-    background: rgb(167, 104, 230);
+    background: darkgoldenrod;
     display: flex;
     align-items: center;
     justify-content: space-between;
