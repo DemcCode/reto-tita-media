@@ -8,6 +8,7 @@ const Modal = ({  isOpen, children }) => {
             {children}
           </div>
         </div>
+
       )
     }
   

@@ -11,14 +11,19 @@
   .modal-body {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-content: center;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     width: 50%;
-    min-width: 280px;
+    min-width: 260px;
+    max-width: 500px;
+    min-height: 330px;
+    max-height: 600px;
     border-radius: 1rem;
     position: relative;
     padding: 1rem;
+    overflow: auto;
   }
   
   .modal-close {
