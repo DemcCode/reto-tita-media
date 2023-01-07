@@ -1,14 +1,15 @@
 # Proyecto listado de Posts 
 
-Este proyecto es una aplicación web desarrollada con React, que utiliza autenticación por medio de firebase de los proveedores Google, Facebook, GitHub y que consume la API de DummyAPI para mostrar una lista de posts, la aplicación permite ver:
+Este proyecto es una aplicación web desarrollada con React, que utiliza autenticación por medio Google, Facebook, GitHub y que consume la API de [https://dummyapi.io/](https://dummyapi.io/) para mostrar un listado de posts, la aplicación permite ver y hacer lo siguiente:
 
-- cada post con foto y nombre del usuario que hizo el post
-- imagen y texto del post
-- tags del post
-- cantidad de likes
-- comentarios (se visualizan en un modal)
-- información detallada del usuario (se visualiza en un modal)
-- filtrar los posts por tag
+- Autenticación por medio de Google, Facebook y GitHub
+- Ver cada post con foto y nombre del usuario que hizo el post
+- Ver imagen y texto del post
+- Ver tags del post
+- Ver cantidad de likes
+- Ver comentarios (se visualizan en un modal)
+- Ver información detallada del usuario (se visualiza en un modal)
+- Filtrar los posts por tag
 
 ## Tecnologías utilizadas
 
@@ -17,9 +18,7 @@ Este proyecto es una aplicación web desarrollada con React, que utiliza autenti
 - React
 - FireBase
 - Axio
-- Atomic Design como metodología para el diseño de sistemas de componentes
-
-
+- Atomic Design como metodología para el diseño de sistema de componentes
 
 ## Requisitos
 
