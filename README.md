@@ -6,8 +6,8 @@ Este proyecto es una aplicación web desarrollada con React, que utiliza autenti
 - imagen y texto del post
 - tags del post
 - cantidad de likes
-- comentarios que al hacer clic se abre un modal 
-- información detallada del usuario que realizo el post al hacer click en el nombre del usuario se abre en un modal
+- comentarios (se visualizan en un modal)
+- información detallada del usuario (se visualiza en un modal)
 - filtrar los posts por tag.
 
 ## Requisitos
