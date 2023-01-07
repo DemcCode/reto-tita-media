@@ -1,7 +1,6 @@
 # Proyecto de listado de posts 
 
-Este proyecto es una aplicación web desarrollada con React que consume la API de DummyAPI para mostrar una lista de posts. 
-La aplicación permite ver:
+Este proyecto es una aplicación web desarrollada con React, que utiliza autenticacion por medio de firebase de los proveedores Google, Facebook, GitHub y que consume la API de DummyAPI para mostrar una lista de posts, la aplicación permite ver:
 
 - cada post con foto y nombre del usuario que hizo el post
 - imagen y texto del post
@@ -14,24 +13,24 @@ La aplicación permite ver:
 ## Requisitos
 
 - Node.js
-- Una cuenta de DummyAPI para obtener la App ID suya y es la se debe reemplazar por la propiedad app-id que se debe enviar en la cabecera al momento de realizar cualquier petición.
-
+- Una cuenta de DummyAPI para obtener la App ID suya y es la que se debe reemplazar por la propiedad app-id que se envia en la cabecera al momento de realizar cualquier petición, aqui te muestro un ejemplo.
+```javascript
+const headers = {
+    'app-id': 'Aqui va su App ID'
+};
+await axios.get('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109f4/post?limit=10',  { headers })
+```
 ## Instalación 
 
 Para instalar este proyecto, sigue estos pasos:
 
 1. Descarga el proyecto y descomprímelo en tu computadora.
 2. Utiliza el siguiente comando para instalar las dependencias:
-
-### `npm install`
-
+   ### `npm install`
 3. Utiliza el siguiente comando para iniciar la aplicación:
-
-### `npm start`
-
+   ### `npm start`
 4. Accede a la aplicación en tu navegador web a través de la dirección 
-
-Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
+   Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
 ## Uso
 Para utilizar esta aplicación, deberas autenticarte por medio de los proveedores que aparecen en el login en este caso te puedes autenticar por medio de google, facebook o github.
