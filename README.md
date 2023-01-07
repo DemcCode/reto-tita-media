@@ -1,4 +1,4 @@
-# Proyecto de listado de posts 
+# Proyecto listado de Posts 
 
 Este proyecto es una aplicación web desarrollada con React, que utiliza autenticacion por medio de firebase de los proveedores Google, Facebook, GitHub y que consume la API de DummyAPI para mostrar una lista de posts, la aplicación permite ver:
 
@@ -12,8 +12,8 @@ Este proyecto es una aplicación web desarrollada con React, que utiliza autenti
 
 ## Requisitos
 
-- Node.js
-- Una cuenta de DummyAPI para obtener la App ID suya y es la que se debe reemplazar por la propiedad app-id que se envia en la cabecera al momento de realizar cualquier petición, aqui te muestro un ejemplo.
+- Tener instalado Node.js en tu equipo.
+- Una cuenta de DummyAPI para obtener la App ID suya y es la que se debe reemplazar por la propiedad app-id que se envia en la cabecera al momento de realizar cualquier petición, aqui te muestro un ejemplo:
 ```javascript
 const headers = {
     'app-id': 'Aqui va su App ID'
@@ -29,11 +29,11 @@ Para instalar este proyecto, sigue estos pasos:
    ### `npm install`
 3. Utiliza el siguiente comando para iniciar la aplicación:
    ### `npm start`
-4. Accede a la aplicación en tu navegador web a través de la dirección 
-   Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
+4. Accede a la aplicación en tu navegador web a través de la dirección
+   [http://localhost:3000](http://localhost:3000)
 
 ## Uso
-Para utilizar esta aplicación, deberas autenticarte por medio de los proveedores que aparecen en el login en este caso te puedes autenticar por medio de google, facebook o github.
+Para utilizar esta aplicación, deberas autenticarte por medio de los proveedores que aparecen en el login en este caso te puedes autenticar por medio de Google, Facebook o GitHub.
 
 ## Author
 
