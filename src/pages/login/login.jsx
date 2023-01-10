@@ -49,6 +49,7 @@ function Login() {
       .then((result) => {
         const credential = GithubAuthProvider.credentialFromResult(result);
         if (credential) {
+          
           const userAvatar = result.user.photoURL
           const userName = result.user.displayName
           localStorage.setItem('user', JSON.stringify(userName));
