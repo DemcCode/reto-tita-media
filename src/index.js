@@ -11,7 +11,7 @@ import { Home } from './pages/home/home';
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: <Login/>,
   },
   {
