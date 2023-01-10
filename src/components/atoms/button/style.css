@@ -45,5 +45,10 @@
 }
 
 .button-modal {
-    
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+    background-color: rgb(182, 182, 182);
+    font-size: 16px;
 }

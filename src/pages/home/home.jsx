@@ -96,7 +96,7 @@ export const Home = () =>  {
                                     <Text text={post.owner.firstName+' '+post.owner.lastName}/> 
                                 </div>
                             </div> 
-                            <Button variant="modal" text={"Cerrar"} onClick={closeModalOwner} />
+                            <Button variant="modal" text={"X"} onClick={closeModalOwner} />
                         </Modal>
                     </div>
                     <div className="post-content">
@@ -123,7 +123,7 @@ export const Home = () =>  {
                                 <Text text={comment.message}/>
                             </div>                            
                         ))}
-                            <Button variant="modal" text={"Cerrar"} onClick={closeModalComment} />
+                            <Button variant="modal" text={"X"} onClick={closeModalComment} />
                         </Modal>
                     </div>
                 </div>               

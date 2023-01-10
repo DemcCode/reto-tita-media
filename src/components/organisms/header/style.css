@@ -20,19 +20,22 @@ header {
 }
 
 .signOut {
-    color: #61DAFB;
+    color: #3807ff;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .textNameUser{
     margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .nameSign {
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .left {

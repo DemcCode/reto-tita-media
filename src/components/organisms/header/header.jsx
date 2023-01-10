@@ -28,7 +28,7 @@ function Header({user}) {
         <Image className="imgUser" src={avatarUser} alt={"Profile"} />
         <div className="nameSign">
           <Text className="textNameUser" text={nameUser}/>
-          <Link className="signOut" href={"/"} text={"Sign Out"} onClick={cleanLocal} />
+          <Link className="signOut" href={"/login"} text={"Sign Out"} onClick={cleanLocal} />
         </div>        
       </div>
     </header>
