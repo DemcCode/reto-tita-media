@@ -1,8 +1,8 @@
 .login {
     border: rgb(210, 209, 209) solid 1px;
     border-radius: 10px;    
-    width: 330px;
-    height: 400px;
+    width: 310px;
+    height: 430px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 30px 50px -20px rgb(118, 118, 118);
+    box-shadow: 0 25px 50px -20px rgb(118, 118, 118);
 }
 
 .login__actions {
