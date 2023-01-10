@@ -1,19 +1,26 @@
+.buttonPost {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0;
+  background-color: transparent; 
+  color: inherit;
+}
+
+.buttonTag {
+  background-color: darkgoldenrod;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.2rem;
+  
+}
+
 .imgOwner {
   width: 60px;
   height: 60px;
   object-fit: contain;
   border-radius: 25% 50% 75% 100%;
   margin-right: 0.7rem;
-}
-
-.buttonPost {
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  cursor: pointer;
 }
 
 .imgPost{
@@ -73,16 +80,6 @@
     gap: 0.3rem;
     margin-bottom: 1rem;
   }
-
-  .buttonTag {
-    background-color: darkgoldenrod;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 0.2rem;
-    cursor: pointer;
-  }
-
   .post-modal {
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -90,6 +87,11 @@
 
   .post-modal-header {
     text-align: center;
+  }
+
+  .post-like {
+    display: flex;
+    gap: 7px;
   }
 
   @media only screen and (max-width: 480px){

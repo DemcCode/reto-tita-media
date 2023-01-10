@@ -1,6 +1,6 @@
 
-import {Button} from "../../components/atoms/button/button"
-import Title from '../../components/atoms/title/title'
+import { Button } from "../../components/atoms/button/button"
+import { Title } from '../../components/atoms/title/title'
 import { auth } from '../../config/firebaseConfig'
 import { signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, GithubAuthProvider } from "firebase/auth"
 import { useNavigate } from "react-router-dom";
@@ -62,13 +62,15 @@ function Login() {
     
   return (
       <div className="login">
-        <Title className="login__title" text={'Login'}/>
-        <div className="login__actions">
-          <Button className="button" text={'Google'} onClick={handleSignInWithGoogle} />
-          <Button className="button" text={'Facebook'} onClick={handleSignInWithFacebook} />
-          <Button className="button" text={'GitHub'} onClick={handleSignInWithGitHub} />     
-        </div>
-      </div>
+        <div className="login-cont">
+          <Title className="login__title" level={'h1'}  text={'Login'}/>
+          <div className="login__actions">
+            <Button variant="google button-login" icon={'google'} text={'Google'}  onClick={handleSignInWithGoogle} />
+            <Button variant="facebook button-login" icon={'facebook'} text={'Facebook'} onClick={handleSignInWithFacebook} />
+            <Button variant="github button-login" icon={'github'} text={'GitHub'} onClick={handleSignInWithGitHub} />     
+          </div>
+        </div>       
+      </div>   
     );
 }
 

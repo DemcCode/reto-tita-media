@@ -11,7 +11,7 @@ export const Home = () =>  {
     const [posts, setPosts] = useState([]);
     const [comment, setComment] = useState([]);
     const [showModalComment, setShowModalComment] = useState(false);  
-    const [showModalOwner, setShowModalOwner] = useState(false);       
+    const [showModalOwner, setShowModalOwner] = useState(false);     
 
     useEffect(() => {     
         async function getPosts() {
@@ -20,7 +20,7 @@ export const Home = () =>  {
             };
             await axios.get('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109f4/post?limit=10',  { headers })
             .then(response => {
-                setPosts(response.data.data);
+                setPosts(response.data.data);         
             })
             .catch(error => {
                 console.error(error);
@@ -30,13 +30,15 @@ export const Home = () =>  {
     }, []);
 
     useEffect(() => {    
-        async function getComments() {
+        const getComments = async() =>{
             const headers = {
                 'app-id': '63b75d0f1181ee14b202e985'
             };
-            await axios.get('https://dummyapi.io/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10',  { headers })
+            await axios.get(`https://dummyapi.io/data/v1/post/60d21af267d0d8992e610b8d/comment?limit=10`,  { headers })
             .then(response => {
-                setComment(response.data.data);            
+                setComment(response.data.data); 
+                
+                console.log(response.data.data);          
             })
             .catch(error => {
                 console.error(error);
@@ -46,12 +48,14 @@ export const Home = () =>  {
     }, []);
 
     const getPostTag = async(tag) => {    
+        console.log('se ejecuto')
         const headers = {
             'app-id': '63b75d0f1181ee14b202e985'
         };
         await axios.get(`https://dummyapi.io/data/v1/tag/${tag}/post?limit=10`,  { headers })
         .then(response => {
-            setPosts(response.data.data);        
+            setPosts(response.data.data);  
+            setComment(response.data.data);       
         })
         .catch(error => {
             console.error(error);
@@ -66,9 +70,10 @@ export const Home = () =>  {
         setShowModalOwner(false);        
     }
 
-    const openModalComment = () => {        
-        setShowModalComment(true);
-    };
+    const openModalComment = () => {
+        setShowModalComment(true);       
+    }
+    
 
     const closeModalComment = () => {
     setShowModalComment(false);
@@ -78,20 +83,20 @@ export const Home = () =>  {
         <>
         <Header />
         <div className='posts-container'>
-        {posts.map((post, indexPost) => (               
-            <div className="posts" key={indexPost}>
+        {posts.map((post, index) => (               
+            <div className="posts" key={index}>
                 <div className="post">
                     <div className="post-header">
                         <Image className="imgOwner" src={post.owner.picture} alt={"ImagenOwner"}/>                        
-                        <Button className="buttonPost" text={post.owner.firstName+' '+post.owner.lastName} onClick={openModalOwner} />
+                        <Button  variant={'post'} text={post.owner.firstName+' '+post.owner.lastName} onClick={openModalOwner} />
                         <Modal isOpen={showModalOwner} onClose={() => setShowModalOwner(false)}>
-                            <div className="post-modal" key={indexPost}>
+                            <div className="post-modal" key={index}>
                                 <div className="post-modal-header">
                                     <Image className="imgOwner" src={post.owner.picture} alt={"ImagenOwner"}/>
                                     <Text text={post.owner.firstName+' '+post.owner.lastName}/> 
                                 </div>
                             </div> 
-                            <Button className="button" text={"Cerrar"} onClick={closeModalOwner} />
+                            <Button variant="modal" text={"Cerrar"} onClick={closeModalOwner} />
                         </Modal>
                     </div>
                     <div className="post-content">
@@ -100,14 +105,14 @@ export const Home = () =>  {
                         <div className='tags-content'>
                             {
                                 post.tags.map((tag, index) => (
-                                    <Button className="buttonTag" text={tag} onClick={()=>getPostTag(tag)} />
+                                    <Button key={index} variant="tag" text={tag} onClick={()=>getPostTag(tag)} />
                                 ))
                             }                        
                         </div>                   
-                        <i className='fa-regular fa-thumbs-up'>{post.likes}</i>
+                        <i className='fa-regular fa-thumbs-up post-like'>{post.likes}</i>
                     </div>
                     <div className="post-footer">
-                        <Button className="buttonPost" text={"Comentarios"} onClick={openModalComment} />
+                        <Button variant="post" text={"Comentarios"} onClick={()=>openModalComment()} />
                         <Modal isOpen={showModalComment} onClose={() => setShowModalComment(false)}>
                         {comment.map((comment, index) => (  
                             <div className="post-modal" key={index}>
@@ -118,7 +123,7 @@ export const Home = () =>  {
                                 <Text text={comment.message}/>
                             </div>                            
                         ))}
-                            <Button className="button" text={"Cerrar"} onClick={closeModalComment} />
+                            <Button variant="modal" text={"Cerrar"} onClick={closeModalComment} />
                         </Modal>
                     </div>
                 </div>               

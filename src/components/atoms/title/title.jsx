@@ -1,9 +1,11 @@
-import React from "react";
+import './style.css'
 
-function Title({className, text }) {
+export const Title = ({level, text }) => {
     return (
-    <h1 className={className}>{text}</h1>
+        <>
+            {level === 'h1' && <h1>{text}</h1>}
+            {level === 'h2' && <h2>{text}</h2>}
+            {level === 'h3' && <h3>{text}</h3>}
+        </>
     );
 }
-
-export default Title;
