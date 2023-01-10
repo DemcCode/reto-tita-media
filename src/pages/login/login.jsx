@@ -62,14 +62,12 @@ function Login() {
     
   return (
       <div className="login">
-        <div className="login-cont">
           <Title className="login__title" level={'h1'}  text={'Login'}/>
           <div className="login__actions">
             <Button variant="google button-login" icon={'google'} text={'Google'}  onClick={handleSignInWithGoogle} />
             <Button variant="facebook button-login" icon={'facebook'} text={'Facebook'} onClick={handleSignInWithFacebook} />
             <Button variant="github button-login" icon={'github'} text={'GitHub'} onClick={handleSignInWithGitHub} />     
-          </div>
-        </div>       
+          </div>     
       </div>   
     );
 }
