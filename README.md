@@ -1,5 +1,7 @@
 # Proyecto listado de Posts 
 
+![List Posts](https://raw.githubusercontent.com/MoratDev/Portafolio/master/assets/img/app-posts.png)
+
 Este proyecto es una aplicación web desarrollada con React, que utiliza autenticación por medio Google, Facebook, GitHub y que consume la API de [https://dummyapi.io/](https://dummyapi.io/) para mostrar un listado de posts, la aplicación permite ver y hacer lo siguiente:
 
 - Autenticación por medio de Google, Facebook y GitHub
