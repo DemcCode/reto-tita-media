@@ -16,6 +16,7 @@
     "react-scripts": "5.0.1",
     "react-social-login": "^3.4.16",
     "react-social-login-buttons": "^3.6.1",
+    "react-spinners": "^0.13.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

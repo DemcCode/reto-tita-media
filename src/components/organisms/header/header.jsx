@@ -2,8 +2,6 @@ import React from 'react';
 import { Image } from '../../atoms/image/image';
 import { Text } from '../../atoms/text/text';
 import { Link } from '../../atoms/link/link';
-
-
 import './style.css'
 
 function Header({user}) { 

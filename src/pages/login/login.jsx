@@ -8,6 +8,7 @@ import './style.css'
 
 function Login() { 
   const navigate = useNavigate();
+  
 
   const handleSignInWithGoogle = () => { 
     const providerGoogle = new GoogleAuthProvider(); 
@@ -50,11 +51,7 @@ function Login() {
         const credential = GithubAuthProvider.credentialFromResult(result);
         if (credential) {
           
-          const userAvatar = result.user.photoURL
-          const userName = result.user.displayName
-          localStorage.setItem('user', JSON.stringify(userName));
-          localStorage.setItem('userAvatar', JSON.stringify(userAvatar));
-          navigate("/home");
+          
         }  
       }).catch((error) => {
         console.log(error);        
