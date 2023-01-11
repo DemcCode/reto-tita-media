@@ -1,5 +1,5 @@
-export const Span = ({text, ...props}) => {
+export const Span = ({text}) => {
     return (
-        <span></span>
+        <span>{text}</span>
     )
 }
